@@ -146,7 +146,7 @@ int main(int argc, char **argv)
 
   printf("PART 1 OFFSET END: 0x%.8X\n", ftell(xex));
 
-  sha1_update(&shaContext, remainderSize, remainderOfHeader);
+  sha1_update(&shaContext, remainderSize, remainderOfHeaders);
   
   // Second part (XEX header)
   uint8_t headersStart[securityInfoOffset + IMAGE_INFO_OFFSET];
